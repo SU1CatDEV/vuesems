@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>Задание 1</h2>
+        <button v-on:click="flipBtnText">{{ btnText }}</button>
+        <h2>Задание 2</h2>
+        <button v-on:click="addElem">Добавить</button>
+        <p>(проверьте консоль)</p>
+    </div>
+
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                btnText: "Перевернуть",
+                elemList: ["elem1", "another elem", "apple", "elem4"]
+            },
+            methods: {
+                flipBtnText(){
+                    this.btnText = this.btnText.split("").reverse().join("");
+                },
+                addElem(){
+                    this.elemList.push("Новый элемент списка");
+                    console.log(this.elemList);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
