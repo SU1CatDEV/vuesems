@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <div class="product">{{ product.name }}:{{ product.price }}</div>
+        <button @click="getDiscount">Get discount</button>
+        <p>Discounted price: {{ discountedPrice }}</p> -->
+
+        <div class="products">
+            <div class="product" v-for="item in products" :key="item.id">
+                <input type="number" v-model.number="item.quantity">
+                <input type="checkbox" name="" id="" v-model="item.bought">
+                <span class="name">{{ item.name }}</span>
+                {{ item.bought }} - {{ item.quantity }}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                discount: 0,
+                /* product: {
+                    name: "Bread",
+                    price: 80,
+                }, */
+                products: [{
+                    name: "Milk",
+                    quantity: 10,
+                    bought: false
+                },
+                {
+                    name: "Bread",
+                    quantity: 8,
+                    bought: false
+                },
+                {
+                    name: "Solt",
+                    quantity: 24,
+                    bought: false
+                }]
+            },
+            methods: {
+                getDiscount(){
+                    this.discount = Math.round(Math.random()*20);
+                }
+            },
+            computed: {
+                discountedPrice(){
+                    return this.product.price - (this.product.price * this.discount) / 100;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
