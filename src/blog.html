@@ -15,67 +15,35 @@
     <link href="./blog.css" rel="stylesheet"/>
 </head>
 <body>
-    <div class="container text-center">
-        <nav class="row d-flex align-items-center">
-            <div class="col d-flex flex-row align-items-center">
-                <img src="../img/Logo.png" alt="interno logo">
-                <h3 class="interno-logo">&nbsp;Interno</h3>
-            </div>
-            <div class="col d-flex flex-row justify-content-end gap-5" style="font-size: 20px;">
-                <a href="#">Домой</a>
-                <a href="#">Проект</a>
-                <a href="#">Блог</a>
-            </div>
-        </nav>
-    </div>
-
-    <header class="d-flex flex-column align-items-center">
-        <div class="blog-header-photo"></div>
-        <div class="header-outer-card">
-            <div class="header-inner-card">
-                <h2>Статьи & <br> Новости</h2>
-                <p class="text-center">Домой / <br> Блог</p>
-            </div>
+    <div id="app">
+        <div class="container text-center">
+            <nav-component></nav-component>
         </div>
-    </header>
-
-    <div class="container text-center" id="app">
-        <div class="blog-block">
-            <div class="recent-card text-start">
-                <h2>Последний пост</h2>
-                <div class="big-block-card d-flex">
-                    <img src="../img/RecentCard.png" alt="" class="recent-card-img">
-                    <div class="d-flex flex-column justify-content-between recent-card-margins">
-                        <div>
-                            <h4>Low Cost Latest Invented Interior Designing Ideas</h4>
-                            <br>
-                            <p class="extra-linespace">С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов. Перед появлением электронных издательств дизайнеры импровизировали в работе над макетами, изображая текст при помощи волнистых линий. С появлением самоклеющихся наклеек с напечатанным текстом «Lorem ipsum» появился более реалистичный способ обозначения расположения текста на странице.</p>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <span class="blog-card-date">26 December,2022</span>
-                            <a href="#" class="small-modern-arrow d-flex justify-content-center align-items-center">
-                                <img src="../img/SmallArrow.png" alt=">">
-                            </a>
-                        </div>
-                    </div>
+    
+        <header class="d-flex flex-column align-items-center">
+            <div class="blog-header-photo"></div>
+            <div class="header-outer-card">
+                <div class="header-inner-card">
+                    <h2>Статьи & <br> Новости</h2>
+                    <p class="text-center">Домой / <br> Блог</p>
                 </div>
             </div>
-            <div>
-                <h2>Статьи & Новости</h2>
-                <div class="blog-card-row row">
-                    <div class="col d-flex flex-column align-items-start" v-for="post in blogposts" :key="post.id">
-                        <div class="index-blog-card">
-                            <div style="max-width: 340px;" class="mbottom-30">
-                                <div class="mbottom-21 home-blog-container">
-                                    <img :src="post.image" alt="blog image 1" class="ibc-img">
-                                    <div class="label text-start" :class="post.addclass">{{ post.label }}</div>
-                                </div>
-                                <h4 class="text-start">{{ post.title }}</h4>
+        </header>
+    
+        <div class="container text-center" id="app">
+            <div class="blog-block">
+                <div class="recent-card text-start">
+                    <h2>Последний пост</h2>
+                    <div class="big-block-card d-flex">
+                        <img src="../img/RecentCard.png" alt="" class="recent-card-img">
+                        <div class="d-flex flex-column justify-content-between recent-card-margins">
+                            <div>
+                                <h4>Low Cost Latest Invented Interior Designing Ideas</h4>
+                                <br>
+                                <p class="extra-linespace">С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов. Перед появлением электронных издательств дизайнеры импровизировали в работе над макетами, изображая текст при помощи волнистых линий. С появлением самоклеющихся наклеек с напечатанным текстом «Lorem ipsum» появился более реалистичный способ обозначения расположения текста на странице.</p>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center mbottom-16">
-                                <div class="text-start">
-                                    <span class="blog-card-date">{{ post.date.day }} {{ post.date.month }},{{ post.date.year }}</span>
-                                </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="blog-card-date">26 December,2022</span>
                                 <a href="#" class="small-modern-arrow d-flex justify-content-center align-items-center">
                                     <img src="../img/SmallArrow.png" alt=">">
                                 </a>
@@ -83,69 +51,60 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="blog-card-row row">
-                    <div class="col d-flex flex-column align-items-start" v-for="post in blogposts2" :key="post.id">
-                        <div class="index-blog-card">
-                            <div style="max-width: 340px;" class="mbottom-30">
-                                <div class="mbottom-21 home-blog-container">
-                                    <img :src="post.image" alt="blog image 1" class="ibc-img">
-                                    <div class="label text-start" :class="post.addclass">{{ post.label }}</div>
-                                </div>
-                                <h4 class="text-start">{{ post.title }}</h4>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mbottom-16">
-                                <div class="text-start">
-                                    <span class="blog-card-date">{{ post.date.day }} {{ post.date.month }},{{ post.date.year }}</span>
-                                </div>
-                                <a href="#" class="small-modern-arrow d-flex justify-content-center align-items-center">
-                                    <img src="../img/SmallArrow.png" alt=">">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer class="row footer">
-            <div class="col">
-                <div class="col d-flex flex-row align-items-center">
-                    <img src="../img/Logo.png" alt="interno logo">
-                    <h3 class="interno-logo">&nbsp;Interno</h3>
-                </div>
-                <div class="padded-31"></div>
-                <div class="d-flex">
-                    <img src="../img/TwitterIcon.png" alt="" class="icon">
-                    <img src="../img/LinkedinIcon.png" alt="" class="icon">
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center text-start">
                 <div>
-                    <h4 class="footer-hx">Страницы</h4>
-                    <div class="d-flex flex-column">
-                        <br>
-                        <a href="./index.html">Домой</a> <br>
-                        <a href="./project.html">Проект</a> <br>
-                        <a href="./blog.html">Блог</a>
+                    <h2>Статьи & Новости</h2>
+                    <div class="blog-card-row row">
+                        <div class="col d-flex flex-column align-items-start" v-for="post in blogposts" :key="post.id">
+                            <div class="index-blog-card">
+                                <div style="max-width: 340px;" class="mbottom-30">
+                                    <div class="mbottom-21 home-blog-container">
+                                        <img :src="post.image" alt="blog image 1" class="ibc-img">
+                                        <div class="label text-start" :class="post.addclass">{{ post.label }}</div>
+                                    </div>
+                                    <h4 class="text-start">{{ post.title }}</h4>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mbottom-16">
+                                    <div class="text-start">
+                                        <span class="blog-card-date">{{ post.date.day }} {{ post.date.month }},{{ post.date.year }}</span>
+                                    </div>
+                                    <a href="#" class="small-modern-arrow d-flex justify-content-center align-items-center">
+                                        <img src="../img/SmallArrow.png" alt=">">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="blog-card-row row">
+                        <div class="col d-flex flex-column align-items-start" v-for="post in blogposts2" :key="post.id">
+                            <div class="index-blog-card">
+                                <div style="max-width: 340px;" class="mbottom-30">
+                                    <div class="mbottom-21 home-blog-container">
+                                        <img :src="post.image" alt="blog image 1" class="ibc-img">
+                                        <div class="label text-start" :class="post.addclass">{{ post.label }}</div>
+                                    </div>
+                                    <h4 class="text-start">{{ post.title }}</h4>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mbottom-16">
+                                    <div class="text-start">
+                                        <span class="blog-card-date">{{ post.date.day }} {{ post.date.month }},{{ post.date.year }}</span>
+                                    </div>
+                                    <a href="#" class="small-modern-arrow d-flex justify-content-center align-items-center">
+                                        <img src="../img/SmallArrow.png" alt=">">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col d-flex justify-content-end text-start">
-                <div class="footer-contacts">
-                    <h4 class="footer-hx">Контакты</h4>
-                    <div class="d-flex flex-column">
-                        <br>
-                        <span>55 East Birchwood Ave. Brooklyn, New York 11201</span> <br>
-                        <span>contact@interno.com</span> <br>
-                        <span>(123) 456 - 7890</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
+    
+            <footer-component></footer-component>
+        </div>
     </div>
 
     <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <script src="./globalcomponents.js"></script>
     <script src="./blog.js"></script>
 </body>
 </html>
