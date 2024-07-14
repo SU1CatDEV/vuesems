@@ -2,7 +2,7 @@
     <div class="index-blog-card">
         <div style="max-width: 340px;" class="mbottom-30">
             <div class="mbottom-21 home-blog-container">
-                <img :src="require(post.image)" alt="blog image 1" class="ibc-img">
+                <img :src="imageSrc" alt="blog image 1" class="ibc-img">
                 <div class="label text-start" :class="post.addclass">{{ post.label }}</div>
             </div>
             <h4 class="text-start">{{ post.title }}</h4>
@@ -25,6 +25,11 @@ export default {
     post: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    imageSrc () {
+      return require(`@/assets/${this.post.image}`)
     }
   }
 }

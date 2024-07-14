@@ -67,7 +67,7 @@ export default {
       blogposts: [
         {
           title: 'Создадим лучший макет перепланировки',
-          image: '../../assets/HomeBlog1.png',
+          image: 'HomeBlog1.png',
           label: 'Дизайн кухни',
           date: {
             day: 26,
@@ -78,7 +78,7 @@ export default {
         },
         {
           title: 'Лучшие интерьерные идеи по низкой цене',
-          image: '../../assets/HomeBlog2.png',
+          image: 'HomeBlog2.png',
           label: 'Дизайн для жизни',
           date: {
             day: 26,
@@ -89,7 +89,7 @@ export default {
         },
         {
           title: 'Лучшие интерьерные решения для офисов',
-          image: '../../assets/HomeBlog3.png',
+          image: 'HomeBlog3.png',
           label: 'Дизайн Интерьера',
           date: {
             day: 26,
@@ -102,7 +102,7 @@ export default {
       blogposts2: [
         {
           title: 'Создадим лучший макет перепланировки',
-          image: '../../assets/HomeBlog4.png',
+          image: 'HomeBlog4.png',
           label: 'Дизайн кухни',
           date: {
             day: 26,
@@ -113,7 +113,7 @@ export default {
         },
         {
           title: 'Лучшие интерьерные идеи по низкой цене',
-          image: '../../assets/HomeBlog5.png',
+          image: 'HomeBlog5.png',
           label: 'Дизайн для жизни',
           date: {
             day: 26,
@@ -124,7 +124,7 @@ export default {
         },
         {
           title: 'Лучшие интерьерные решения для офисов',
-          image: '../../assets/HomeBlog6.png',
+          image: 'HomeBlog6.png',
           label: 'Дизайн Интерьера',
           date: {
             day: 26,

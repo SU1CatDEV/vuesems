@@ -47,7 +47,7 @@ export default {
         {
           id: 1,
           post_title: 'Создадим лучший макет перепланировки',
-          blog_photo_src: '../../assets/BlogPostPhoto.png',
+          blog_photo_src: 'BlogPostPhoto.png',
           blog_photo_alt: 'Blog post photo',
           day: 26,
           month: 'Декабрь',
@@ -66,7 +66,7 @@ export default {
                 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.'
               ]
             },
-            { type: 'img', src: '../../assets/PostContentImg.png' },
+            { type: 'img', src: 'PostContentImg.png' },
             { type: 'text', value: 'В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке.' }
           ],
           tags: ['Кухня', 'Архитектура']
@@ -74,7 +74,7 @@ export default {
         {
           id: 2,
           post_title: 'Создадим лучший макет перепланировки',
-          blog_photo_src: '../../assets/BlogPostPhoto.png',
+          blog_photo_src: 'BlogPostPhoto.png',
           blog_photo_alt: 'Blog post photo',
           day: 26,
           month: 'Декабрь',
@@ -93,7 +93,7 @@ export default {
                 'С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности для примеров шрифтов и текстов.'
               ]
             },
-            { type: 'img', src: '../../assets/PostContentImg.png' },
+            { type: 'img', src: 'PostContentImg.png' },
             { type: 'text', value: 'В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке.' }
           ],
           tags: ['Спальня', 'Здание', 'Архитектура', 'Планировка']

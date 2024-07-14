@@ -14,7 +14,7 @@ export default {
   computed: {
     bgImgStyles () {
       return {
-        backgroundImage: `url(${this.src})`
+        backgroundImage: `url(${require('@/assets/' + this.src)})`
       }
     }
   }

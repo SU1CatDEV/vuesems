@@ -2,7 +2,7 @@
     <div>
         <div class="blog-post-titular">
             <h2 class="blog-post-header">{{ post.post_title }}</h2>
-            <img :src="post.blog_photo_src" :alt="post.blog_photo_alt" class="blog-post-img">
+            <img :src="require(`@/assets/${post.blog_photo_src}`)" :alt="post.blog_photo_alt" class="blog-post-img">
             <div class="d-flex justify-content-between blog-post-meta">
                 <span>{{ post.day }} {{ post.month }},{{ post.year }}</span>
                 <span>{{ post.desc }}</span>
