@@ -16,10 +16,10 @@
 
     <div class="container text-center">
       <div class="blog-block">
-        <!-- <div class="recent-card text-start">
+        <div class="recent-card text-start">
             <h2>Последний пост</h2>
             <div class="big-block-card d-flex">
-                <img src="../img/RecentCard.png" alt="" class="recent-card-img">
+                <img src="../../assets/RecentCard.png" alt="" class="recent-card-img">
                 <div class="d-flex flex-column justify-content-between recent-card-margins">
                     <div>
                         <h4>Low Cost Latest Invented Interior Designing Ideas</h4>
@@ -29,12 +29,12 @@
                     <div class="d-flex justify-content-between">
                         <span class="blog-card-date">26 December,2022</span>
                         <a href="#" class="small-modern-arrow d-flex justify-content-center align-items-center">
-                            <img src="../img/SmallArrow.png" alt=">">
+                            <img src="../../assets/SmallArrow.png" alt=">">
                         </a>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <div>
             <h2>Статьи & Новости</h2>
             <div class="blog-card-row row">
