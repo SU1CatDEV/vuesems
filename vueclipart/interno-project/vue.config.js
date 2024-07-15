@@ -17,6 +17,12 @@ module.exports = {
       template: 'public/index.html',
       title: 'Blog Details',
       chunks: ['chunk-vendors', 'chunk-common', 'blogdet']
+    },
+    project: {
+      entry: './src/pages/Project/main.js',
+      template: 'public/index.html',
+      title: 'Blog Details',
+      chunks: ['chunk-vendors', 'chunk-common', 'project']
     }
   }
 }

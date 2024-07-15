@@ -34,8 +34,8 @@
               class="top-kitchen-img first-kitchen-img"
             />
             <div class="d-flex justify-content-between align-items-center">
-              <div class="text-start">
-                <h4>Современная кухня</h4>
+              <div class="text-start ic-header-wrapper">
+                <h4 class="index-card-header">Современная кухня</h4>
                 <span>Декор / Планировка</span>
               </div>
               <a
@@ -55,8 +55,8 @@
               class="top-kitchen-img second-kitchen-img"
             />
             <div class="d-flex justify-content-between align-items-center">
-              <div class="text-start">
-                <h4>Современная кухня</h4>
+              <div class="text-start ic-header-wrapper">
+                <h4 class="index-card-header">Современная кухня</h4>
                 <span>Декор / Планировка</span>
               </div>
               <a
@@ -78,8 +78,8 @@
               class="bottom-kitchen-img third-kitchen-img"
             />
             <div class="d-flex justify-content-between align-items-center">
-              <div class="text-start">
-                <h4>Современная кухня</h4>
+              <div class="text-start ic-header-wrapper">
+                <h4 class="index-card-header">Современная кухня</h4>
                 <span>Декор / Планировка</span>
               </div>
               <a
@@ -99,8 +99,8 @@
               class="bottom-kitchen-img fourth-kitchen-img"
             />
             <div class="d-flex justify-content-between align-items-center">
-              <div class="text-start">
-                <h4>Современная кухня</h4>
+              <div class="text-start ic-header-wrapper">
+                <h4 class="index-card-header">Современная кухня</h4>
                 <span>Декор / Планировка</span>
               </div>
               <a
@@ -246,4 +246,14 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.index-card-header{
+  position: absolute;
+  margin-top: -30px;
+  z-index: -1;
+}
+
+.ic-header-wrapper{
+  align-self: flex-end;
+}
+</style>

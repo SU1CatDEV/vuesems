@@ -16,9 +16,9 @@
                 <h4 class="footer-hx">Страницы</h4>
                 <div class="d-flex flex-column">
                     <br>
-                    <a href="./index.html">Домой</a> <br>
-                    <a href="./project.html">Проект</a> <br>
-                    <a href="./blog.html">Блог</a>
+                    <a href="index.html">Домой</a> <br>
+                    <a href="project.html">Проект</a> <br>
+                    <a href="blog.html">Блог</a>
                 </div>
             </div>
         </div>
