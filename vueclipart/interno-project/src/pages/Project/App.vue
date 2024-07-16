@@ -15,6 +15,13 @@
       </header>
 
       <div class="container">
+        <div class="d-flex justify-content-center">
+          <div class="d-flex tag-wrapper text-center">
+            <div v-for="tag in tags" :key="tag.id" :class="{ 'selected-tag': isTagSelected(tag) }" @click="selectTag(tag)">
+              {{ tag }}
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col col-6">
             <ProjectPost v-for="post in thisPageFirstCol" :key="post.id" :post="post"></ProjectPost>
@@ -33,7 +40,7 @@
           >
             {{ fomattedPageNo(page) }}
           </button>
-          <button @click="nextPage" :disabled="pageNo === totalPages" class="d-flex align-items-center justify-content-center"><img src="../../assets/PagRight.png" alt=">"></button>
+          <button @click="nextPage" :disabled="pageNo === totalPages || totalPages === 0" class="d-flex align-items-center justify-content-center"><img src="../../assets/PagRight.png" alt=">"></button>
         </div>
 
         <FooterComponent></FooterComponent>
@@ -65,17 +72,17 @@ export default {
         { id: 6, title: 'aa', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost6.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
         { id: 7, title: 'aa', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost7.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
         { id: 8, title: 'aa', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost8.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
-        { id: 9, title: 'bb', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost1.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
-        { id: 10, title: 'bb', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost2.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
-        { id: 11, title: 'bb', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost3.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
+        { id: 9, title: 'bb', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost1.png', photo_alt: 'Blog post photo', tags: ['Ванная комната'] },
+        { id: 10, title: 'bb', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost2.png', photo_alt: 'Blog post photo', tags: ['Ванная комната'] },
+        { id: 11, title: 'bb', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost3.png', photo_alt: 'Blog post photo', tags: ['Ванная комната'] },
         { id: 12, title: 'bb', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost4.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
         { id: 13, title: 'bb', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost5.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
         { id: 14, title: 'bb', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost6.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
         { id: 15, title: 'bb', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost7.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
         { id: 16, title: 'bb', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost8.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
-        { id: 17, title: 'cc', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost1.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
-        { id: 18, title: 'cc', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost2.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
-        { id: 19, title: 'cc', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost3.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
+        { id: 17, title: 'cc', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost1.png', photo_alt: 'Blog post photo', tags: ['Ванная комната'] },
+        { id: 18, title: 'cc', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost2.png', photo_alt: 'Blog post photo', tags: ['Ванная комната'] },
+        { id: 19, title: 'cc', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost3.png', photo_alt: 'Blog post photo', tags: ['Ванная комната'] },
         { id: 20, title: 'cc', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost4.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
         { id: 21, title: 'cc', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost5.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
         { id: 22, title: 'cc', desc: 'Интерьер / Домой / Декор', photo_src: 'ProjPost6.png', photo_alt: 'Blog post photo', tags: ['Спальня'] },
@@ -151,11 +158,7 @@ export default {
   },
   methods: {
     selectTag (tag) {
-      if (this.selectedTag === tag) {
-        this.selectedTag = null
-      } else {
-        this.selectedTag = tag
-      }
+      this.selectedTag = tag
       this.pageNo = 1 // Reset to first page when changing tag
     },
     isTagSelected (tag) {
@@ -236,6 +239,25 @@ export default {
   }
 
   .pagination button:disabled {
-    display:none;
+    display: none !important;
+  }
+
+  .tag-wrapper {
+    border: 1px solid #CDA274;
+    border-radius: 18px;
+    width: fit-content;
+    margin-bottom: 61px;
+  }
+
+  .tag-wrapper div {
+    font-size: 18px;
+    padding: 26px 66px;
+    width: fit-content;
+  }
+
+  .selected-tag {
+    background-color: #CDA274;
+    color: white;
+    border-radius: 18px;
   }
 </style>
