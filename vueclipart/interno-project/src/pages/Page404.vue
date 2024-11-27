@@ -1,0 +1,79 @@
+<template>
+    <h1>404. Такой странице не существует</h1>
+</template>
+
+<!-- извините, у меня небыло времени сделать нормальную страницу, но в конце концов это не урок HTML. -->
+<script>
+
+export default {
+  name: 'App'
+}
+</script>
+
+  <style>
+  .blog-header-photo {
+      width: 100%;
+      height: 356px;
+      background-image: url("@/assets/BlogPhoto.jpg")
+  }
+
+  .header-outer-card {
+      background-color: white;
+      border-radius: 37px 37px 0 0;
+      margin-top: -178px;
+      padding: 41px 78px;
+  }
+
+  .header-inner-card {
+      width: 347px;
+  }
+
+  .recent-card-margins {
+      margin-left: 65px;
+      margin-right: 34px;
+  }
+
+  .extra-linespace {
+      line-height: 1.5;
+  }
+
+  .recent-card {
+      margin-bottom: 88px;
+  }
+
+  .blog-block {
+      margin: 104px 0 200px 0;
+  }
+
+  .recent-card h2 {
+      margin-bottom: 27px;
+  }
+
+  .big-block-card {
+      padding: 21px;
+      border: 1px solid #E7E7E7;
+      border-radius: 62px;
+  }
+
+  .recent-card-img {
+      border-radius: 50px;
+  }
+
+  .blog-card-row {
+      margin-top: 30px;
+  }
+
+  .label {
+      background-color: white;
+      padding: 4px 8px 8px 8px;
+      border-radius: 8px 8px 8px 0;
+      margin-top: -80px;
+      margin-left: -145px;
+      z-index: 1;
+      max-width: none;
+  }
+
+  .labellong {
+      margin-left: -95px;
+  }
+  </style>

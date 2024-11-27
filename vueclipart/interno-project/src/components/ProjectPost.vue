@@ -10,12 +10,12 @@
                 <h4 class="index-card-header">{{ post.title }}</h4>
                 <span>{{ post.desc }}</span>
             </div>
-            <a
-                href="#"
+            <router-link
+                to="/blog-details"
                 class="modern-arrow d-flex justify-content-center align-items-center"
             >
-                <img src="../assets/ModernArrow.png" alt=">" />
-            </a>
+                <img src="@/assets/ModernArrow.png" alt=">" />
+            </router-link>
         </div>
     </div>
 </template>

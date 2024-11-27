@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="pagination da-big-mb">
-          <button @click="prevPage" :disabled="pageNo === 1" class="d-flex align-items-center justify-content-center"><img src="../../assets/PagLeft.png" alt="<"></button>
+          <button @click="prevPage" :disabled="pageNo === 1" class="d-flex align-items-center justify-content-center"><img src="@/assets/PagLeft.png" alt="<"></button>
           <button
             v-for="page in visiblePages"
             :key="page"
@@ -40,7 +40,7 @@
           >
             {{ fomattedPageNo(page) }}
           </button>
-          <button @click="nextPage" :disabled="pageNo === totalPages || totalPages === 0" class="d-flex align-items-center justify-content-center"><img src="../../assets/PagRight.png" alt=">"></button>
+          <button @click="nextPage" :disabled="pageNo === totalPages || totalPages === 0" class="d-flex align-items-center justify-content-center"><img src="@/assets/PagRight.png" alt=">"></button>
         </div>
 
         <FooterComponent></FooterComponent>
@@ -49,9 +49,9 @@
 </template>
 
 <script>
-import NavComponent from '../../components/NavComponent.vue'
-import FooterComponent from '../../components/FooterComponent.vue'
-import ProjectPost from '../../components/ProjectPost.vue'
+import NavComponent from '@/components/NavComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
+import ProjectPost from '@/components/ProjectPost.vue'
 
 export default {
   name: 'App',
@@ -190,7 +190,7 @@ export default {
 
 <style>
   .project-header-photo {
-    background-image: url('../../assets/ProjectPhoto.jpg');
+    background-image: url('@/assets/ProjectPhoto.jpg');
     width: 100%;
     height: 356px;
   }

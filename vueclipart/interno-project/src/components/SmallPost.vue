@@ -11,9 +11,9 @@
             <div class="text-start">
                 <span class="blog-card-date">{{ post.date.day }} {{ post.date.month }},{{ post.date.year }}</span>
             </div>
-            <a href="#" class="small-modern-arrow d-flex justify-content-center align-items-center">
-                <img src="../assets/SmallArrow.png" alt=">">
-            </a>
+            <router-link to="/blog-details" class="small-modern-arrow d-flex justify-content-center align-items-center">
+                <img src="@/assets/SmallArrow.png" alt=">">
+            </router-link>
         </div>
     </div>
 </template>

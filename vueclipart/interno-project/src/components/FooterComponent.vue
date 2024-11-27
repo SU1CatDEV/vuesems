@@ -2,13 +2,13 @@
     <footer class="row footer">
         <div class="col">
             <div class="col d-flex flex-row align-items-center">
-                <img src="../assets/Logo.png" alt="interno logo">
+                <img src="@/assets/Logo.png" alt="interno logo">
                 <h3 class="interno-logo">&nbsp;Interno</h3>
             </div>
             <div class="padded-31"></div>
             <div class="d-flex">
-                <img src="../assets/TwitterIcon.png" alt="" class="icon">
-                <img src="../assets/LinkedinIcon.png" alt="" class="icon">
+                <img src="@/assets/TwitterIcon.png" alt="" class="icon">
+                <img src="@/assets/LinkedinIcon.png" alt="" class="icon">
             </div>
         </div>
         <div class="col d-flex justify-content-center text-start">
@@ -16,9 +16,9 @@
                 <h4 class="footer-hx">Страницы</h4>
                 <div class="d-flex flex-column">
                     <br>
-                    <a href="index.html">Домой</a> <br>
-                    <a href="project.html">Проект</a> <br>
-                    <a href="blog.html">Блог</a>
+                    <router-link to="/" exact>Домой</router-link> <br>
+                    <router-link to="/project">Проект</router-link> <br>
+                    <router-link to="/blog">Блог</router-link>
                 </div>
             </div>
         </div>
